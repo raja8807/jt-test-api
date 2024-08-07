@@ -8,5 +8,10 @@ router.get("/", async (req, res) => {
     data: "ok",
   });
 });
+router.get("/test/:id", async (req, res) => {
+  return res.send({
+    data: req.params.id,
+  });
+});
 
 module.exports = router;
