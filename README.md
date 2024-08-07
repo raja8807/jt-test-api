@@ -1,45 +1,36 @@
-![example workflow](https://github.com/rzgry/Express-REST-API-Template/actions/workflows/node.js.yml/badge.svg)
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+run `npm install` to install the project dependencies
 
-# Express-REST-API-Template
+#### Setting up the PostgreSQL database
+Install the following PostgreSQL environments.
 
-Simple express boilerplate based off of [express-generator](https://expressjs.com/en/starter/generator.html). Includes [eslint](https://eslint.org) and [prettier](https://prettier.io) for linting/code formatting, [nodemon](https://github.com/remy/nodemon) for automatic server restarting, and [Jest](https://jestjs.io) for testing.
+- [PostgreSQL](https://www.postgresql.org/download/)an opensource relational databse management system.
+- [pgAdmin](https://www.pgadmin.org/download/), standalone destop application for managing PostgreSQL databases.
 
-## Getting Started
+Once installed and well configured, create a database and a table to work with.
 
-### Install dependencies
+- Create a database, `my_todos_db`.
 
+```SQL
+CREATE DATABASE test
 ```
-npm install
+
+- Create a table, `todos`.
+
+```SQL
+CREATE TABLE todos (
+  id SERIAL PRIMARY KEY,
+  title VARCHAR(100) NOT NULL,
+  checked  Boolean NOT NULL)
 ```
 
-### Running in development
+### Running the application
 
-```
+- Start the development server by Running:
+
+```bash
 npm run dev
 ```
 
-### Running in production
+- In a browser, visit `http://localhost/4000`;
 
-```
-npm start
-```
-
-Runs on localhost:3000 by default but can be configured using the `PORT` environment variable.
-
-### Running tests
-
-```
-npm test
-
-# Watch repo
-npm run test:watch
-```
-
-### Linting
-```
-npm run lint
-
-# fix issues
-npm run lint:fix
-```
+- Interact with the application.

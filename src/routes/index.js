@@ -1,9 +1,12 @@
-const express = require('express');
+const express = require("express");
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  res.send({ message: 'Hello world' });
+//Get all todos.
+router.get("/", async (req, res) => {
+  return res.send({
+    data: "ok",
+  });
 });
 
 module.exports = router;
